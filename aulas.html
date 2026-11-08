@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNMaps - Búsqueda</title>
+    <link rel="icon" type="image/png" href="img/icons/mapita.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-search">
+    <nav class="navbar fixed-bottom py-2">
+        <div class="container-fluid justify-content-center gap-5">
+            <a href="inicio.html" class="nav-icon-button" data-page="inicio" aria-label="Inicio">
+                <img src="img/icons/casa.png" alt="" aria-hidden="true">
+            </a>
+            <a href="map.html" class="nav-icon-button" data-page="map" aria-label="Mapa">
+                <img src="img/icons/mapita.png" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </nav>
+
+    <main class="container text-center py-4">
+        <h1 class="titulo-aulas-edificios">Aulas</h1>
+
+        <div class="d-grid gap-3 mt-4 building-list">
+            <div class="building-item">
+                <button type="button" class="building-button" aria-expanded="false" aria-controls="options-historico">
+                    Edificio histórico <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="building-options" id="options-historico" hidden>
+                    <div class="room-grid">
+                        <button type="button" class="room-button" data-room="H001" data-route="salonH001">H001</button>
+                        <button type="button" class="room-button" data-room="H002" data-route="salonH002">H002</button>
+                        <button type="button" class="room-button" data-room="H003" data-route="salonH003">H003</button>
+                        <button type="button" class="room-button" data-room="H004" data-route="salonH004">H004</button>
+                        <button type="button" class="room-button" data-room="G001" data-route="salonG001">G001</button>
+                        <button type="button" class="room-button" data-room="G002" data-route="salonG002">G002</button>
+                        <button type="button" class="room-button" data-room="G003" data-route="salonG003">G003</button>
+                        <button type="button" class="room-button" data-room="G004" data-route="salonG004">G004</button>
+                        <button type="button" class="room-button" data-room="F001" data-route="salonF001">F001</button>
+                        <button type="button" class="room-button" data-room="F002" data-route="salonF002">F002</button>
+                        <button type="button" class="room-button" data-room="F003" data-route="salonF003">F003</button>
+                        <button type="button" class="room-button" data-room="F004" data-route="salonF004">F004</button>
+                    </div>
+                </div>
+            </div>
+            <div class="building-item">
+                <button type="button" class="building-button" aria-expanded="false" aria-controls="options-daract-1">
+                    Daract 1 <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="building-options" id="options-daract-1" hidden>
+                    <div class="room-grid">
+                        <button type="button" class="room-button" data-room="Aula1y3" data-route="d1aula1y3">Aula 1-3</button>
+                        <button type="button" class="room-button" data-room="Aula2" data-route="d1aula2">Aula 2</button>
+                        <button type="button" class="room-button" data-room="Aula4" data-route="d1aula4">Aula 4</button>
+                        <button type="button" class="room-button" data-room="Aula5y7" data-route="d1aula5y7">Aula 5-7</button>
+                        <button type="button" class="room-button" data-room="Aula6" data-route="d1aula6">Aula 6</button>
+                        <button type="button" class="room-button" data-room="Aula8" data-route="d1aula8">Aula 8</button>
+                        <button type="button" class="room-button" data-room="Banos" data-route="d1banos">Baños</button>
+                        <button type="button" class="room-button" data-room="Biblioteca" data-route="d1biblioteca">Biblioteca</button>
+                    </div>
+                </div>
+            </div>
+            <div class="building-item">
+                <button type="button" class="building-button" aria-expanded="false" aria-controls="options-daract-2">
+                    Daract 2 <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="building-options" id="options-daract-2" hidden>
+                    <div class="room-grid">
+                        <button type="button" class="room-button" data-room="aula1y3" data-route="d2aula1y3">Aula 1-3</button>
+                        <button type="button" class="room-button" data-room="aula2" data-route="d2aula2">Aula 2</button>
+                        <button type="button" class="room-button" data-room="aula4" data-route="d2aula4">Aula 4</button>
+                        <button type="button" class="room-button" data-room="aula5" data-route="d2aula5">Aula 5</button>
+                        <button type="button" class="room-button" data-room="aula6" data-route="d2aula6">Aula 6</button>
+                        <button type="button" class="room-button" data-room="aula8" data-route="d2aula8">Aula 8</button>
+                        <button type="button" class="room-button" data-room="banos" data-route="d2banos">Baños</button>
+                        <button type="button" class="room-button" data-room="sum" data-route="d2sum">SUM</button>
+                    </div>
+                </div>
+            </div>
+            <div class="building-item">
+                <button type="button" class="building-button" aria-expanded="false" aria-controls="options-dorrego-1">
+                    Dorrego 1 <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="building-options" id="options-dorrego-1" hidden>
+                    Próximamente...
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const buildingButtons = document.querySelectorAll('.building-button');
+
+        buildingButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                if (button.getAttribute('aria-controls') === 'options-daract-1') {
+                    localStorage.setItem('daractI', 'true');
+                    localStorage.setItem('daractII', 'false');
+                } else if (button.getAttribute('aria-controls') === 'options-daract-2') {
+                    localStorage.setItem('daractI', 'false');
+                    localStorage.setItem('daractII', 'true');
+                } else {
+                    localStorage.setItem('SUM', 'false');
+                }
+
+                const options = document.getElementById(button.getAttribute('aria-controls'));
+                const shouldOpen = button.getAttribute('aria-expanded') !== 'true';
+
+                buildingButtons.forEach((item) => {
+                    item.setAttribute('aria-expanded', 'false');
+                    const itemOptions = document.getElementById(item.getAttribute('aria-controls'));
+                    const itemElement = item.closest('.building-item');
+                    itemElement.classList.remove('is-open');
+                    itemOptions.hidden = true;
+                });
+
+                if (shouldOpen) {
+                    const buildingItem = button.closest('.building-item');
+                    options.hidden = false;
+                    options.getBoundingClientRect();
+                    button.setAttribute('aria-expanded', 'true');
+                    buildingItem.classList.add('is-open');
+                }
+
+                document.body.classList.toggle('has-open-building', shouldOpen);
+            });
+        });
+
+        document.querySelectorAll('.room-grid').forEach((grid) => {
+            grid.addEventListener('click', (event) => {
+                const selectedButton = event.target.closest('.room-button');
+                if (!selectedButton) return;
+
+                const selectedRoom = selectedButton.dataset.room;
+                const isSum = selectedRoom === 'sum';
+                const isHistorico = grid.closest('.building-options').id === 'options-historico';
+                const isDaractI = grid.closest('.building-options').id === 'options-daract-1';
+                const isDaractII = grid.closest('.building-options').id === 'options-daract-2';
+                const routeRooms = isDaractI
+                    ? ['Aula1y3', 'Aula2', 'Aula4', 'Aula5y7', 'Aula6', 'Aula8', 'Banos', 'Biblioteca']
+                    : ['aula1y3', 'aula2', 'aula4', 'aula5', 'aula6', 'aula8', 'banos'];
+                routeRooms.forEach((room) => {
+                    localStorage.setItem(room, String(selectedRoom === room));
+                });
+                localStorage.setItem('SUM', String(isSum));
+                if (isHistorico) {
+                    localStorage.setItem('daractI', 'false');
+                    localStorage.setItem('daractII', 'false');
+                }
+                if (isDaractI) {
+                    localStorage.setItem('daractI', 'true');
+                    localStorage.setItem('daractII', 'false');
+                }
+                if (isSum) {
+                    localStorage.setItem('daractI', 'false');
+                    localStorage.setItem('daractII', 'true');
+                }
+
+                grid.querySelectorAll('.room-button').forEach((button) => {
+                    button.classList.toggle('is-selected', button === selectedButton);
+                });
+
+                if (isHistorico || isDaractI || isDaractII) {
+                    const params = new URLSearchParams({
+                        ubicacion_objetivo_aulas: selectedButton.dataset.route
+                    });
+                    if (isHistorico) {
+                        params.set('ubicacion_objetivo', 'historico');
+                    } else if (isDaractI || isDaractII) {
+                        params.set('ubicacion_objetivo', isDaractI ? 'daract1' : 'daract2');
+                    }
+                    setTimeout(() => {
+                        window.location.href = `map.html?${params.toString()}`;
+                    }, 180);
+                }
+            });
+        });
+
+        const currentPage = window.location.pathname.split('/').pop() || 'inicio.html';
+        const navButtons = document.querySelectorAll('.navbar .nav-icon-button');
+
+        navButtons.forEach((button) => {
+            const page = button.dataset.page;
+            const isCurrentPage =
+                (page === 'inicio' && currentPage === 'inicio.html') ||
+                (page === 'map' && currentPage === 'map.html');
+
+            button.classList.toggle('active', isCurrentPage);
+
+            button.addEventListener('click', () => {
+                navButtons.forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

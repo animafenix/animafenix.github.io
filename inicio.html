@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNMaps</title>
+    <link rel="icon" type="image/png" href="img/icons/mapita.png">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-inicio">
+    <div class="d-flex justify-content-center">
+        <img src="img/logo.png" class="logo-inicio" alt="Logotipo de U.N.MAP">
+    </div>
+
+    <!-- 1. Barra de navegación (Navbar) -->
+    <nav class="navbar fixed-bottom py-2">
+        <div class="container-fluid justify-content-center gap-5">
+            <a href="inicio.html" class="nav-icon-button" data-page="inicio" aria-label="Inicio">
+                <img src="img/icons/casa.png" alt="" aria-hidden="true">
+            </a>
+            <a href="map.html" class="nav-icon-button" data-page="map" aria-label="Mapa">
+                <img src="img/icons/mapita.png" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </nav>
+
+    <main class="container text-center py-4">
+        <h1 class="textos-inicio">¡Bienvenido/a! ¿A dónde vamos?</h1>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="edificios.html" class="nav-icon-button home-action-button home-action-button--standard"
+                aria-label="Edificios">
+                <img src="img/icons/edificios.png" alt="" aria-hidden="true">
+                Edificios
+            </a>
+            <a href="aulas.html" class="nav-icon-button home-action-button home-action-button--standard"
+                aria-label="Aulas">
+                <img src="img/icons/aulas.png" alt="" aria-hidden="true">
+                Aulas
+            </a>
+        </div>
+
+        <div class="d-flex justify-content-center mt-3">
+            <button type="button" class="nav-icon-button home-action-button home-action-button--emergency"
+                aria-label="Emergencia">
+                <img src="img/icons/emergencia.png" alt="" aria-hidden="true">
+                Emergencia
+                <img src="img/icons/emergencia.png" alt="" aria-hidden="true">
+            </button>
+        </div>
+
+        <h2 class="textos-inicio pt-4">Destinos destacados</h2>
+
+        <div id="destinosCarousel" class="carousel slide mt-4" data-bs-ride="false" data-bs-touch="true"
+            data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/dptoalumnos.png" class="dibujo-carta" alt="Destino destacado 1">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/banios.png" class="dibujo-carta" alt="Destino destacado 2">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/buffetnuevo.png" class="dibujo-carta" alt="Destino destacado 3">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/buffetviejo.png" class="dibujo-carta" alt="Destino destacado 4">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/fotocopia.png" class="dibujo-carta" alt="Destino destacado 5">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/bienestar.png" class="dibujo-carta" alt="Destino destacado 6">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/biblioruido.png" class="dibujo-carta" alt="Destino destacado 7">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/bibliosilencio.png" class="dibujo-carta" alt="Destino destacado 8">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="destino-card border-0 shadow-sm overflow-hidden justify-content-center">
+                        <img src="img/carousel/enfermeria.png" class="dibujo-carta" alt="Destino destacado 9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const edificiosLink = document.querySelector('.home-action-button[aria-label="Edificios"]');
+        edificiosLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            const destino = edificiosLink.href;
+            setTimeout(() => {
+                window.location.href = destino;
+            }, 180);
+        });
+
+        const aulasLink = document.querySelector('.home-action-button[aria-label="Aulas"]');
+        aulasLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            const destino = aulasLink.href;
+            setTimeout(() => {
+                window.location.href = destino;
+            }, 180);
+        });
+
+        const currentPage = window.location.pathname.split('/').pop() || 'inicio.html';
+        const navButtons = document.querySelectorAll('.navbar .nav-icon-button');
+
+        navButtons.forEach((button) => {
+            const page = button.dataset.page;
+            const isCurrentPage =
+                (page === 'inicio' && currentPage === 'inicio.html') ||
+                (page === 'map' && currentPage === 'map.html');
+
+            button.classList.toggle('active', isCurrentPage);
+
+            button.addEventListener('click', () => {
+                navButtons.forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+
+        const carousel = document.getElementById('destinosCarousel');
+        let startX = 0;
+        let currentX = 0;
+        let dragging = false;
+
+        const resetDrag = () => {
+            dragging = false;
+            carousel.classList.remove('dragging');
+        };
+
+        const finishDrag = (event) => {
+            if (!dragging) return;
+
+            const deltaX = currentX - startX;
+            resetDrag();
+
+            if (carousel.hasPointerCapture && carousel.hasPointerCapture(event.pointerId)) {
+                carousel.releasePointerCapture(event.pointerId);
+            }
+
+            if (Math.abs(deltaX) <= 50) return;
+
+            const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+            if (deltaX < 0) {
+                bsCarousel.next();
+            } else {
+                bsCarousel.prev();
+            }
+        };
+
+        carousel.addEventListener('pointerdown', (event) => {
+            event.preventDefault();
+            dragging = true;
+            startX = event.clientX;
+            currentX = event.clientX;
+            carousel.classList.add('dragging');
+
+            if (carousel.setPointerCapture) {
+                carousel.setPointerCapture(event.pointerId);
+            }
+        });
+
+        carousel.addEventListener('pointermove', (event) => {
+            if (!dragging) return;
+            currentX = event.clientX;
+        });
+
+        carousel.addEventListener('pointerup', finishDrag);
+        carousel.addEventListener('pointercancel', () => resetDrag());
+    </script>
+
+    <!-- Bootstrap JS Bundle con Popper (necesario para menús desplegables, modales, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

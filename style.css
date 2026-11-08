@@ -1,0 +1,454 @@
+.nav-icon-button {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    color: #004aac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    text-underline-offset: unset;
+}
+
+.nav-icon-button:hover,
+.nav-icon-button:focus {
+    background-color: #5070fe;
+    border: none;
+    color: #ffffff;
+    text-decoration: none;
+    text-underline-offset: unset;
+}
+
+.nav-icon-button:active,
+.nav-icon-button.active {
+    background-color: #004aac;
+    border: none;
+    color: #ffffff;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nav-icon-button i {
+    font-size: 1.25rem;
+}
+
+.nav-icon-button img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.nav-icon-button:hover img,
+.nav-icon-button:focus img,
+.nav-icon-button:active img,
+.nav-icon-button.active img {
+    filter: brightness(0) invert(1);
+}
+
+/* # Estilos compartidos */
+.page-index {
+    background-image: url('img/ingreso.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
+    height: 100dvh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Inter';
+}
+
+.main-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-index {
+    width: 60%;
+    margin-top: 10%;
+}
+
+.texto-index {
+    font-weight: bold;
+    margin-top: 4%;
+    font-size: 1.3rem;
+    color: #004aac;
+}
+
+.index-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3% 0;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #004aac;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.index-button:hover,
+.index-button:focus-visible {
+    background-color: #5070fe;
+}
+
+.index-button:focus-visible {
+    outline: 2px solid #004aac;
+    outline-offset: 3px;
+}
+
+.page-inicio,
+.page-map,
+.page-search,
+.page-edificios {
+    font-family: 'Inter', sans-serif;
+    font-size: 12pt;
+    background-color: #d7deff;
+    padding-bottom: 76px;
+}
+
+.page-inicio h3,
+.page-inicio h4,
+.page-inicio h5,
+.page-inicio h6,
+.page-map h1,
+.page-map h2,
+.page-map h3,
+.page-map h4,
+.page-map h5,
+.page-map h6,
+.page-search h1,
+.page-search h2,
+.page-search h3,
+.page-search h4,
+.page-search h5,
+.page-search h6,
+.page-edificios h1,
+.page-edificios h2,
+.page-edificios h3,
+.page-edificios h4,
+.page-edificios h5,
+.page-edificios h6 {
+    font-size: 23pt;
+}
+
+.page-inicio .nav-icon-button,
+.page-map .nav-icon-button,
+.page-search .nav-icon-button,
+.page-edificios .nav-icon-button {
+    font-size: 15pt;
+}
+
+.page-inicio .navbar.fixed-bottom,
+.page-map .navbar.fixed-bottom,
+.page-search .navbar.fixed-bottom,
+.page-edificios .navbar.fixed-bottom {
+    background-color: #ffffff !important;
+}
+
+.page-inicio .navbar.fixed-bottom .nav-icon-button,
+.page-map .navbar.fixed-bottom .nav-icon-button,
+.page-search .navbar.fixed-bottom .nav-icon-button,
+.page-edificios .navbar.fixed-bottom .nav-icon-button {
+    margin: 0;
+}
+
+/* # inicio.html */
+
+.textos-inicio {
+    font-weight: bold;
+    font-size: 150%;
+    color: #004aac;
+}
+
+.page-inicio .home-action-button {
+    gap: 8px;
+    border-radius: 999px;
+    font-size: 110%;
+}
+
+.page-inicio .home-action-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.page-inicio #destinosCarousel {
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.page-inicio #destinosCarousel.dragging {
+    cursor: grabbing;
+}
+
+.page-inicio #destinosCarousel .carousel-inner {
+    overflow: hidden;
+}
+
+/*0000000000000000000000000000000000000000000000000000000000000000000000000000000000000*/
+.page-inicio .destino-card {
+    border: 0px;
+    background: rgba(236, 8, 8, 0);
+}
+
+@media (max-width: 440px) {
+    .logo-inicio {
+        width: 60%;
+        margin-top: 5%;
+    }
+
+    .page-inicio .home-action-button--standard {
+        width: 43%;
+    }
+
+    .page-inicio .home-action-button--emergency {
+        width: 90%;
+    }
+
+    .page-inicio .dibujo-carta {
+        border-radius: 0.7rem;
+        width: 62%;
+    }
+}
+
+@media (min-width: 441px) {
+    .logo-inicio {
+        width: 20%;
+        margin-top: 3%;
+    }
+
+    .page-inicio .home-action-button--standard {
+        width: 19.3%;
+    }
+
+    .page-inicio .home-action-button--emergency {
+        width: 40%;
+    }
+
+    .page-inicio .dibujo-carta {
+        border-radius: 1rem;
+        width: 20%;
+    }
+}
+
+/* # map.html */
+.page-map .map-placeholder {
+    height: 400px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 20px;
+}
+
+/* # aulas.html */
+.titulo-aulas-edificios {
+    color: #004aac;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.page-search {
+    --building-color-transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.page-search.has-open-building {
+    background-color: #004aac;
+}
+
+.page-search.has-open-building h1 {
+    color: #ffffff;
+}
+
+.page-search main h1 {
+    transition: color 0.5s ease;
+}
+
+.page-search .building-list {
+    max-width: 560px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-edificios .building-list {
+    max-width: 560px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-edificios .building-button {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 16px;
+    background-color: #ffffff;
+    color: #004aac;
+    font: inherit;
+    font-size: 15pt;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-edificios .building-button:hover,
+.page-edificios .building-button:focus {
+    background-color: #5070fe;
+    color: #ffffff;
+}
+
+.page-edificios .building-button:active {
+    background-color: #004aac;
+    color: #ffffff;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.page-edificios .building-button:focus-visible {
+    outline: 2px solid #004aac;
+    outline-offset: 2px;
+}
+
+.page-search .building-item {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.page-search .building-button {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 16px;
+    background-color: #ffffff;
+    color: #004aac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font: inherit;
+    font-size: 15pt;
+    transition: var(--building-color-transition);
+}
+
+.page-search .building-button:not([aria-expanded="true"]):hover {
+    background-color: #ffffff;
+    color: #004aac;
+}
+
+.page-search .building-button:focus-visible {
+    outline: 2px solid #d7deff;
+    outline-offset: 2px;
+}
+
+.page-search .building-button[aria-expanded="true"] {
+    border-radius: 16px 16px 0 0;
+    background-color: #5070fe;
+    color: #ffffff;
+}
+
+.page-search .building-button[aria-expanded="true"]:hover {
+    background-color: #5070fe;
+    color: #ffffff;
+}
+
+.page-search .building-button[aria-expanded="true"]:focus-visible {
+    outline-offset: -2px;
+}
+
+.page-search .building-button i {
+    position: absolute;
+    right: 20px;
+    transition: transform 0.2s ease;
+}
+
+.page-search .building-button[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.page-search .building-options {
+    padding: 16px 20px;
+    border-radius: 0 0 16px 16px;
+    background-color: #ffffff;
+    color: #004aac;
+    text-align: left;
+    transition: var(--building-color-transition);
+}
+
+.page-search .building-item.is-open .building-options {
+    background-color: #5070fe;
+    color: #ffffff;
+}
+
+.page-search .building-options[hidden] {
+    display: none;
+}
+
+.page-search .room-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.page-search .room-button {
+    min-height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #004aac;
+    font: inherit;
+    font-size: 15pt;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-search .room-button:hover,
+.page-search .room-button:focus-visible {
+    background-color: #5070fe;
+    color: #ffffff;
+}
+
+.page-search .room-button:active,
+.page-search .room-button.is-selected {
+    background-color: #004aac;
+    color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-search,
+    .page-search main h1,
+    .page-search .building-button,
+    .page-search .building-options {
+        transition-duration: 0.01ms;
+    }
+}
+
+body.page-map {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Evita barras de desplazamiento */
+}
+
+#map-container {
+    width: 100vw;
+    height: calc(100vh - 65px);
+    /* Ajusta los 65px según el alto de tu barra navbar */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Para asegurar que el canvas ocupe todo el div contenedor */
+#map-container canvas {
+    display: block;
+}
