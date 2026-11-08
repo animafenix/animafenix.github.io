@@ -6,7 +6,7 @@ let accesible;
 let ascensor;
 let globo;
 let biblioteca;
-let zonaSimulada;
+//let zonaSimulada;
 
 const parametrosUbicacion = new URLSearchParams(window.location.search);
 let ubicacion_objetivo = parametrosUbicacion.get('ubicacion_objetivo');
